@@ -43,7 +43,11 @@ Expand-Archive SysinternalsSuite-Nano.zip
 Set-Location $path\SysinternalsSuite-Nano
 
 Write-Host "Unzip Complete."
+# Write-Host "Retrieving Configuration File..."
 
+#Invoke-WebRequest -Uri https://raw.githubusercontent.com/aluminoobie/sysmon-config/master/sysmonconfig-export.xml -Outfile sysmonconfig-export.xml
+
+#Write-Host "Configuration File Retrieved."
 Write-Host "Installing Sysmon..."
 
 .\sysmon64.exe -accepteula -i
